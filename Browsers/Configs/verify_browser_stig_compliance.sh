@@ -135,7 +135,7 @@ check_pref "$CHROME_DOMAIN" "HistorySearchSettings" "2" "DTBC-0079: AI History S
 check_pref "$CHROME_DOMAIN" "TabCompareSettings" "2" "DTBC-0080: Tab Compare disabled" "chrome"
 
 echo ""
-echo "Chrome STIG Summary: ${GREEN}$CHROME_PASS PASS${NC} | ${RED}$CHROME_FAIL FAIL${NC}"
+echo -e "Chrome STIG Summary: ${GREEN}$CHROME_PASS PASS${NC} | ${RED}$CHROME_FAIL FAIL${NC}"
 echo ""
 
 ################################################################################
@@ -167,7 +167,7 @@ check_pref "$FIREFOX_DOMAIN" "DisablePocket" "1" "V-252908: Pocket disabled" "fi
 check_pref "$FIREFOX_DOMAIN" "DisableFirefoxStudies" "1" "V-252909: Firefox Studies disabled" "firefox"
 
 echo ""
-echo "Firefox STIG Summary: ${GREEN}$FIREFOX_PASS PASS${NC} | ${RED}$FIREFOX_FAIL FAIL${NC}"
+echo -e "Firefox STIG Summary: ${GREEN}$FIREFOX_PASS PASS${NC} | ${RED}$FIREFOX_FAIL FAIL${NC}"
 echo ""
 
 ################################################################################
@@ -236,7 +236,7 @@ check_pref "$EDGE_DOMAIN" "DefaultCookiesSetting" "4" "V-260467: Session-only co
 check_pref "$EDGE_DOMAIN" "ConfigureDefaultPasteFormatForUrls" "1" "V-266981: Friendly URLs disabled" "edge"
 
 echo ""
-echo "Edge STIG Summary: ${GREEN}$EDGE_PASS PASS${NC} | ${RED}$EDGE_FAIL FAIL${NC}"
+echo -e "Edge STIG Summary: ${GREEN}$EDGE_PASS PASS${NC} | ${RED}$EDGE_FAIL FAIL${NC}"
 echo ""
 
 ################################################################################
@@ -246,9 +246,9 @@ echo "==========================================================================
 echo "                        OVERALL SUMMARY"
 echo "=========================================================================="
 echo ""
-echo "Chrome:  ${GREEN}$CHROME_PASS PASS${NC} | ${RED}$CHROME_FAIL FAIL${NC}"
-echo "Firefox: ${GREEN}$FIREFOX_PASS PASS${NC} | ${RED}$FIREFOX_FAIL FAIL${NC}"
-echo "Edge:    ${GREEN}$EDGE_PASS PASS${NC} | ${RED}$EDGE_FAIL FAIL${NC}"
+echo -e "Chrome:  ${GREEN}$CHROME_PASS PASS${NC} | ${RED}$CHROME_FAIL FAIL${NC}"
+echo -e "Firefox: ${GREEN}$FIREFOX_PASS PASS${NC} | ${RED}$FIREFOX_FAIL FAIL${NC}"
+echo -e "Edge:    ${GREEN}$EDGE_PASS PASS${NC} | ${RED}$EDGE_FAIL FAIL${NC}"
 echo ""
 
 TOTAL_PASS=$((CHROME_PASS + FIREFOX_PASS + EDGE_PASS))
@@ -257,7 +257,7 @@ TOTAL_CHECKS=$((TOTAL_PASS + TOTAL_FAIL))
 
 if [ $TOTAL_CHECKS -gt 0 ]; then
     COMPLIANCE_PERCENT=$(( (TOTAL_PASS * 100) / TOTAL_CHECKS ))
-    echo "Total:   ${GREEN}$TOTAL_PASS PASS${NC} | ${RED}$TOTAL_FAIL FAIL${NC} ($TOTAL_CHECKS checks)"
+    echo -e "Total:   ${GREEN}$TOTAL_PASS PASS${NC} | ${RED}$TOTAL_FAIL FAIL${NC} ($TOTAL_CHECKS checks)"
     echo "Compliance: $COMPLIANCE_PERCENT%"
 else
     echo "No checks performed."
