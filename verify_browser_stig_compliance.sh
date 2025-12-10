@@ -233,7 +233,7 @@ check_pref "$EDGE_DOMAIN" "QuicAllowed" "0" "V-246736: QUIC protocol disabled" "
 check_pref "$EDGE_DOMAIN" "VisualSearchEnabled" "0" "V-260465: Visual Search disabled" "edge"
 check_pref "$EDGE_DOMAIN" "HubsSidebarEnabled" "0" "V-260466: Copilot disabled" "edge"
 check_pref "$EDGE_DOMAIN" "DefaultCookiesSetting" "4" "V-260467: Session-only cookies enabled" "edge"
-check_pref "$EDGE_DOMAIN" "ConfigureDefaultPasteFormatForUrls" "1" "V-266981: Friendly URLs disabled" "edge"
+check_pref "$EDGE_DOMAIN" "ConfigureFriendlyURLFormat" "1" "V-266981: Friendly URLs disabled" "edge"
 
 echo ""
 echo -e "Edge STIG Summary: ${GREEN}$EDGE_PASS PASS${NC} | ${RED}$EDGE_FAIL FAIL${NC}"
