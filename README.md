@@ -611,7 +611,7 @@ This is a **manual check** that cannot be enforced via configuration profile. Or
 ## Additional Resources
 
 ### Official STIG Documentation
-- Location: `~/Desktop/RipDev/STIG's/Browsers/`
+- Location: `/path/to/STIGs/Browsers/`
 - Chrome: `U_Google_Chrome_V2R11_STIG/`
 - Firefox: `U_MOZ_Firefox_V6R6_STIG/`
 - Edge: `U_MS_Edge_V2R3_STIG/`
